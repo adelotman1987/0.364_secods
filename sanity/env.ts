@@ -14,6 +14,10 @@ export const token = assertValue(
   process.env.NEXT_PUBLIC_SANITY_TOKEN,
   "Missing environment variable: NEXT_PUBLIC_SANITY_TOKEN" 
 );
+export const Studio = assertValue(
+  process.env.STUDIO_URL,
+  'Missing enviroment varible STUDIO_URL'
+)
 export const useCdn = false;
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
